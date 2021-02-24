@@ -5,4 +5,7 @@ metadata:
 spec:
   serviceAccountName: pipeline
   triggers:
-    - triggerRef: vote-trigger
+  - bindings:
+    - ref: vote-app
+    template:
+      name: vote-app
